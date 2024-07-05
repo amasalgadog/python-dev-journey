@@ -7,7 +7,10 @@ This course started explaining the role of a programmer and it ends with you bei
 -   try-except structures
 -   break and continue statements
 -   reserved functions such as input(), type() and data type conversions functions
--   your own created functions
+-   your own functions
+
+Assignments and some exercises are located inside the 'assignments' folder
+
 
 ## Introduction
 
