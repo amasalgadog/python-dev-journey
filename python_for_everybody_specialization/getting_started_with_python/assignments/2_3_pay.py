@@ -14,4 +14,4 @@ rate_per_hour = input ('Enter Rate per Hour:')
 #   Output expect to be in a numeric float format
 pay = float(hours) * float(rate_per_hour)
 print('Pay:',pay)
-print('Pay: ' + str(pay))
+#  print('Pay: ' + str(pay)) is another option
