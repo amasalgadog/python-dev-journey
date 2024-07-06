@@ -14,12 +14,20 @@ Assignments and some exercises are located inside the 'assignments' folder
 
 ## Introduction
 
-Computers want to help humans and they are programmed, and designed, to do so, and the only think in their 'mind' is 'What do you want to do next?'. Users, on the other hand, they all know what to do next. So, the programmer job is to act as intermediary between the computer and the user in their communication.
+Computers want to help humans and they are programmed (and designed) to do so. The only think inside the computers 'mind' is 'What do you want to do next?'. Users, on the other hand, they all know what to do next. So, the programmer job is to act as intermediary in the communication between the computer and the user.
 
-In order to successfully achieve this, a programmer need to use tools such as compilers, interpreters, networks, programming languages and more. Python is one of those tools, a programming language that will help you in this job of serving the user.
+In order to successfully achieve this, a programmer need to use tools such as compilers, interpreters, networks, programming languages and more. **Python** is one of those tools, a programming language that will help you in this job of serving the user.
 
-So first, you need to install python in your computer. In order to work, Python need instructions. These instructions has to follow the language of Python and they need to be written using words the computer can understand.
+You'll need to have Python3 installed in your computer, so you'll have to download it from the Microsoft Store or their website > [Download Python](https://www.python.org/downloads/).  
+Most of Linux distribution comes with Python preinstalled, but if you want to check if everything is in order you can do it by running the following in the terminal:  
 
+> $ python3 --version  
+
+This should return something like this:  
+
+> Python 3.10.12  
+
+And it's all done. You are ready to go!
 
 ## Syntax, semantics and data types
 
