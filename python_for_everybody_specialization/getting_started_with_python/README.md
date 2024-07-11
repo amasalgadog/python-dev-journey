@@ -11,7 +11,7 @@ This course started explaining the role of a programmer and it ends with you bei
 - reserved functions such as **input()**, **type()** and data type conversions functions
 - your own functions
 
-Assignments and some exercises are located inside the 'assignments' folder
+Assignments are enumerated following the course modules
 <!-- end of section -->
 
 
