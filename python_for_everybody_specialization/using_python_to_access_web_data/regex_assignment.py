@@ -38,4 +38,6 @@ for line in handle:
                 count += 1
 
 #   checking the values
-print(haystack, sum(haystack), count)
+#   print(haystack)
+print(sum(haystack))
+print(count)
