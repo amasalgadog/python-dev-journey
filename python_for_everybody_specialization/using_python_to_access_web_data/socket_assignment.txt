@@ -1,0 +1,59 @@
+Question 1 
+What do we call it when a browser uses the HTTP protocol to load a file or page from a server and display it in the browser?
+
+-   The Request/Response Cycle
+
+Question 2
+Which of the following is most similar to a TCP port number?
+
+-   A telephone extension number
+
+Question 3
+What must you do in Python before opening a socket?
+
+-   import socket
+
+Question 4
+Which of the following TCP sockets is most commonly used for web protocol (HTTP)?
+
+-   Port 80
+
+Question 5
+Which of the following is most like an open socket in a application?
+
+-   An 'in-progress' phone call
+
+Question 6
+What does the 'H' of HTTP stand for?
+
+-   HyperText (correct answer in the quiz)
+
+Quesiton 7
+What is an important aspect of an Application Layer protocol like HTTP?
+
+NOT how long do we wait before packets are retransmitted?
+NOT what is the ip address for a domain like www.dr-chuck.com
+NOT how much memory does the server need to serve requests?
+-   which application talks first?  The client or server?
+
+Question 8
+What are the three parts of an URL (uniform resource locator)?
+
+-   protocol, host, document
+
+Question 9
+When you click on an anchor tag in a web page, what HTTP request is sent to the server?
+
+-   GET
+
+Question 10
+Which organization publishes Internet Protocol Standards?
+
+-   IETF (Internet Engineering Task Force)
+
+Extra Question
+Question 4
+In a client-server application on the web using sockets, which must come up first?
+
+NOT it doesn't matter
+OPTIONS client or server
