@@ -5,6 +5,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #   connect to data.pr4e.org host through port 80
 sock.connect(('data.pr4e.org', 80))
 #   encode() function converts the unicode from the Python string to utf-8, before sending it
+#   if you remove \r characters from the request (GET string) then you get back an HTML document due to a bad request
 cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
 #   send the command through the socket
 sock.send(cmd)
