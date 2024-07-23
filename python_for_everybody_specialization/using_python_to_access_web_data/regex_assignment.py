@@ -18,8 +18,8 @@ and then converting the extracted strings to integers and summing up the integer
 
 import re
 
-file_sample = 'python_for_everybody_specialization/using_python_to_access_web_data/regex_sum_42.txt'
-file_actual = 'python_for_everybody_specialization/using_python_to_access_web_data/regex_sum_2049589.txt'
+file_sample = 'using_python_to_access_web_data/regex_sum_42.txt'
+file_actual = 'using_python_to_access_web_data/regex_sum_2049589.txt'
 handle = open(file_actual)
 haystack = list()
 count = 0
