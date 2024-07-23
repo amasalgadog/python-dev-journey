@@ -14,8 +14,18 @@ tags = soup('a')
 
 #   print(tags) -> yep, tags is definetely a list of anchor HTML elements
 for tag in tags:
-    print(tag.get('href', None))
-    #   just get the link from the href attribute in the anchor element
+    print(tag)
+    #   get the tag from the HTML element
 
+    print(tag.get('href', None))
+    #   get the link from the href attribute in the anchor element
+    
+    print(tag.contents[0])
+    #   get the content from the HTML element
+
+    print(tag.attrs)
+    #   get the attributes in the HTML anchor element
+
+    print()
 
 #   the print should return 'http://www.dr-chuck.com/page2,htm'
