@@ -30,3 +30,5 @@ for item in lst:
     #   same as previous
     print('Attribute', item.get('x'))
     #   .get will look for the attritute 'x' and return its value
+
+    #   so, find works for single tags search and findall works for multiple tags search
