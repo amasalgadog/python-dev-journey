@@ -79,7 +79,7 @@ i = 0
 name = None
 
 while i < iterations:
-    #print(webpage, i)   #   test
+    #print(webpage, name, i)   #   test
     webpage, name = Scraping(webpage, pos)
     i += 1
 
