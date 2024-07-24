@@ -49,13 +49,19 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-def Scraping(link, pos):
+# recursive function for scraping an url with a given position and a number of iterations
+def Scraping(link, pos, i):
     html = urllib.request.urlopen(link, context=ctx).read()
     soup = BeautifulSoup(html, 'html.parser')
     tags = soup('a')
     webpage = tags[pos-1].get('href', None)
     name = tags[pos-1].contents[0]
-    return webpage, name
+
+    if i == 1:
+        return webpage, name
+    else:
+        # print(i)      # testing for number of iterations
+        return Scraping(webpage, pos, i-1)
 
 sample_url = 'http://py4e-data.dr-chuck.net/known_by_Fikret.html'
 sample_pos = 3     #   fixed
@@ -65,22 +71,12 @@ actual_url = 'http://py4e-data.dr-chuck.net/known_by_Benjamin.html'
 actual_pos = 18     #   fixed
 actual_iter = 7    #   fixed
 
-# SAMPLE for test
-# webpage = sample_url
-# iterations = sample_iter
-# pos = sample_pos
-
-# ACTUAL for assignment
+# ACTUAL values for assignment
 webpage = actual_url
 iterations = actual_iter
 pos = actual_pos
 
-i = 0
-name = None
+webpage, name = Scraping(webpage, pos, iterations)
 
-while i < iterations:
-    #print(webpage, name, i)   #   test
-    webpage, name = Scraping(webpage, pos)
-    i += 1
-
-print(webpage, i, name)
+# print the href attribute value and content of the last anchor element scraped
+print(webpage, '>', name)
