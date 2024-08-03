@@ -33,7 +33,7 @@ for item in handle:
     # cur.execute() data live temporarily in 'cur'
 
     row = cur.fetchone()
-    # cur.fetchone() -> temporarily data in 'cur' will be stored in 'row' variable
+    # cur.fetchone() -> the first result from temporarily data in 'cur' will be stored in 'row' variable
 
     if row is None:
         cur.execute('INSERT INTO Counts (email, count) VALUES (?,1)', (email,))
