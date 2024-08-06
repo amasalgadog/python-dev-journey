@@ -49,3 +49,5 @@ data = cur.fetchall()
 print(data)
 print()
 print(data[0])
+
+cur.close()

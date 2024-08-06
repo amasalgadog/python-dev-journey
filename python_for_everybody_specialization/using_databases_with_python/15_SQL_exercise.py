@@ -49,3 +49,5 @@ for item in handle:
 sqlstr = 'SELECT email,count FROM Counts ORDER BY count DESC'
 for row in cur.execute(sqlstr):
     print(row[0], row[1])
+
+cur.close()
