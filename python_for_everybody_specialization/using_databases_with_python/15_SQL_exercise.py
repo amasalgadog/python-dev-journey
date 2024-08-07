@@ -45,7 +45,7 @@ for item in handle:
     conn.commit()
     # .commit() will "publish" the database into the disk. It's a slow process
     
-# order the database by descendent 'count' values and print them
+# print an ordered database by 'count' with descent values 
 sqlstr = 'SELECT email,count FROM Counts ORDER BY count DESC'
 for row in cur.execute(sqlstr):
     print(row[0], row[1])
