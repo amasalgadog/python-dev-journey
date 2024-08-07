@@ -2,6 +2,7 @@
 
 Exercise to simulate a track-managing database
 UPDATE 0: create tables and insert data into them
+UPDATE 1: using join operator
 
 '''
 
@@ -89,6 +90,19 @@ cur.execute("INSERT INTO Track (title, rating, len, count, album_id, genre_id) V
 
 # store the virtual database new data records physically
 conn.commit()
+
+# print a relational table made by JOIN operator with Album title and Artist name
+cur.execute("SELECT Album.title, Artist.name FROM Album JOIN Artist ON Album.artist_id=Artist.id")
+result1 = cur.fetchall()
+print(result1)
+# this print a list of tuples
+
+# print a relational table made by JOIN operator with Track title, Album title and Artist name
+# with more than 2 tables, there's need to be more JOIN operator, in this case Album linked both Track and Artist so it works perfectly for the FROM operator
+cur.execute("SELECT Track.title, Album.title, Artist.name FROM Album JOIN Track ON Track.album_id=Album.id JOIN Artist ON Album.artist_id=Artist.id")
+result2 = cur.fetchall()
+print(result2)
+# this also print a list of tuples but this time with 3 values in each one
 
 # close cursor
 cur.close()
