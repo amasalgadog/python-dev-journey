@@ -94,15 +94,23 @@ conn.commit()
 # print a relational table made by JOIN operator with Album title and Artist name
 cur.execute("SELECT Album.title, Artist.name FROM Album JOIN Artist ON Album.artist_id=Artist.id")
 result1 = cur.fetchall()
-print(result1)
+# print(result1)
 # this print a list of tuples
 
 # print a relational table made by JOIN operator with Track title, Album title and Artist name
 # with more than 2 tables, there's need to be more JOIN operator, in this case Album linked both Track and Artist so it works perfectly for the FROM operator
 cur.execute("SELECT Track.title, Album.title, Artist.name FROM Album JOIN Track ON Track.album_id=Album.id JOIN Artist ON Album.artist_id=Artist.id")
 result2 = cur.fetchall()
-print(result2)
+# print(result2)
 # this also print a list of tuples but this time with 3 values in each one
+
+# print a relational table made by JOIN operator with Track title, Album title, Artist name and Genre
+# this is another method for using more than 2 tables FROM <table1> JOIN <table2> JOIN <table3> JOIN ... <tablen> and then ON linking the respective tables plus AND operator between each relationship
+cur.execute("SELECT Track.title, Album.title, Artist.name, Genre.name FROM Track JOIN Album JOIN Artist Join Genre ON Track.album_id=Album.id AND Album.artist_id=Artist.id AND Track.genre_id=Genre.id")
+result3 = cur.fetchall()
+# print(result3)
+for item in result3:
+    print(item)
 
 # close cursor
 cur.close()
