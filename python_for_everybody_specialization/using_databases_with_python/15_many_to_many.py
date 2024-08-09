@@ -19,5 +19,13 @@ cur.execute('''
             PRIMARY KEY (id AUTOINCREMENT)
             )''')
 
+cur.execute('DROP TABLE IF EXISTS Author')
+cur.execute('''
+            CREATE TABLE Author (
+            person_id INTEGER,
+            book_id INTEGER,
+            PRIMARY KEY (person_id, book_id)
+            )''')
+
 cur.close()
 conn.close()
