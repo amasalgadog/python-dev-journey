@@ -31,32 +31,24 @@ cur.execute('''
 
 conn.commit()
 
-cur.execute('''
-            INSERT OR IGNORE INTO Person (name, email) VALUES ('J. R. R. Tolkien','jrrr@tolkien.com');
-            INSERT OR IGNORE INTO Person (name, email) VALUES ('Christopher Tolkien','chris@tolkien.com');
-            INSERT OR IGNORE INTO Person (name, email) VALUES ('Marc André Meyers','marc.meyers@biomaterials.com');
-            INSERT OR IGNORE INTO Person (name, email) VALUES ('Po-Yu Chen','po-yu.chen@biomaterials.com')
-            ''')
+cur.execute("INSERT OR IGNORE INTO Person (name, email) VALUES ('J. R. R. Tolkien','jrrr@tolkien.com')")
+cur.execute("INSERT OR IGNORE INTO Person (name, email) VALUES ('Christopher Tolkien','chris@tolkien.com')")
+cur.execute("INSERT OR IGNORE INTO Person (name, email) VALUES ('Marc André Meyers','marc.meyers@biomaterials.com')")
+cur.execute("INSERT OR IGNORE INTO Person (name, email) VALUES ('Po-Yu Chen','po-yu.chen@biomaterials.com')")
 
-cur.execute('''
-            INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Fellowship of the Ring');
-            INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Two Towers');
-            INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Return of the King');
-            INSERT OR IGNORE INTO Book (title) VALUES ('The Silmarillion');
-            INSERT OR IGNORE INTO Book (title) VALUES ('Biological Materials Science: Biological Materials, Bioinspired Materials, and Biomaterials')
-            ''')
+cur.execute("INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Fellowship of the Ring')")
+cur.execute("INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Two Towers')")
+cur.execute("INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Return of the King')")
+cur.execute("INSERT OR IGNORE INTO Book (title) VALUES ('The Silmarillion')")
+cur.execute("INSERT OR IGNORE INTO Book (title) VALUES ('Biological Materials Science: Biological Materials, Bioinspired Materials, and Biomaterials')")
 
-conn.commit()
-
-cur.execute('''
-            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 1);
-            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 2);
-            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 3);
-            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 4);
-            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (2, 4);
-            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (3, 5);
-            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (4, 5);
-            ''')
+cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 1)")
+cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 2)")
+cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 3)")
+cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 4)")
+cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (2, 4)")
+cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (3, 5)")
+cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (4, 5)")
 
 conn.commit()
 
