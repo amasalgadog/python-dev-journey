@@ -11,5 +11,13 @@ cur.execute('''
             PRIMARY KEY (id AUTOINCREMENT)
             )''')
 
+cur.execute('DROP TABLE IF EXISTS Book')
+cur.execute('''
+            CREATE TABLE Book (
+            id INTEGER NOT NULL UNIQUE,
+            title TEXT,
+            PRIMARY KEY (id AUTOINCREMENT)
+            )''')
+
 cur.close()
 conn.close()
