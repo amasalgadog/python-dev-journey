@@ -19,6 +19,7 @@ cur.execute('''
             PRIMARY KEY (id AUTOINCREMENT)
             )''')
 
+# Author table is a junction table consisting in 2 foreign keys pointing to Book and Person
 cur.execute('DROP TABLE IF EXISTS Author')
 cur.execute('''
             CREATE TABLE Author (
@@ -26,6 +27,7 @@ cur.execute('''
             book_id INTEGER,
             PRIMARY KEY (person_id, book_id)
             )''')
+# this PRIMARY KEY operation with two fields (columns) is a combination that force it to be unique combination
 
 cur.close()
 conn.close()
