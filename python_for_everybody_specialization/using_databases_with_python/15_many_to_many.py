@@ -53,6 +53,10 @@ cur.execute("INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (4, 5)")
 conn.commit()
 
 cur.execute("SELECT Book.title, Person.name FROM Author JOIN Book JOIN Person ON Author.person_id=Person.id AND Author.book_id=Book.id ORDER BY Book.title ASC, Person.name DESC")
+result = cur.fetchall()
+
+for item in result:
+    print(item)
 
 cur.close()
 conn.close()
