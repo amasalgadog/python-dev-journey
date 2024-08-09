@@ -29,12 +29,26 @@ cur.execute('''
             )''')
 # this PRIMARY KEY operation with two fields (columns) is a combination that force it to be unique combination
 
+conn.commit()
+
 cur.execute('''
             INSERT OR IGNORE INTO Person (name, email) VALUES ('J. R. R. Tolkien','jrrr@tolkien.com');
             INSERT OR IGNORE INTO Person (name, email) VALUES ('Christopher Tolkien','chris@tolkien.com');
-            INSERT OR IGNORE INTO Person (name, email) VALUES ('Marc André Meyers','marc.meyers@biomaterials.com')
+            INSERT OR IGNORE INTO Person (name, email) VALUES ('Marc André Meyers','marc.meyers@biomaterials.com');
             INSERT OR IGNORE INTO Person (name, email) VALUES ('Po-Yu Chen','po-yu.chen@biomaterials.com')
             ''')
+
+cur.execute('''
+            INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Fellowship of the Ring');
+            INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Two Towers');
+            INSERT OR IGNORE INTO Book (title) VALUES ('The Lords of the Rings: The Return of the King');
+            INSERT OR IGNORE INTO Book (title) VALUES ('The Silmarillion');
+            INSERT OR IGNORE INTO Book (title) VALUES ('Biological Materials Science: Biological Materials, Bioinspired Materials, and Biomaterials')
+            ''')
+
+conn.commit()
+
+
 
 cur.close()
 conn.close()
