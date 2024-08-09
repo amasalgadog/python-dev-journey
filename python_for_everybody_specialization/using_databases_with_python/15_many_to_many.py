@@ -48,7 +48,17 @@ cur.execute('''
 
 conn.commit()
 
+cur.execute('''
+            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 1);
+            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 2);
+            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 3);
+            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (1, 4);
+            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (2, 4);
+            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (3, 5);
+            INSERT OR IGNORE INTO Author (person_id, book_id) VALUES (4, 5);
+            ''')
 
+conn.commit()
 
 cur.close()
 conn.close()
