@@ -8,7 +8,7 @@ import sys
 
 serviceurl = 'http://py4e-data.dr-chuck.net/opengeo?'
 
-conn = sqlite3.connect('opengeo.sqlite')
+conn = sqlite3.connect('using_databases_with_python/opengeo.sqlite')
 cur = conn.cursor()
 
 cur.execute('CREATE TABLE IF NOT EXISTS Locations (address TEXT, geodata TEXT)')
@@ -23,8 +23,8 @@ handle = open(location)
 count = 0
 nofound = 0
 for line in handle:
-    if count > 100:
-        print('Retrieved 100 locations, restart to retrieve more')
+    if count > 270:
+        print('Retrieved 270 locations, restart to retrieve more')
         break
 
     address = line.strip()
