@@ -29,8 +29,16 @@ for row in cur:
     try:
         print(where, lat, lon)
         count += 1
-        if count > 1 : handle.write(",\n")
+        if count > 1 : 
+            handle.write(",\n")
         output = "["+str(lat)+","+str(lon)+", '"+where+"']"
         handle.write(output)
-    except: pass
+    except: continue
+
+handle.write("\n];\n")
+cur.close()
+conn.close()
+handle.close()
+print(count, 'records written to where.js')
+print('Open where.html to view the data in a browser')
 
