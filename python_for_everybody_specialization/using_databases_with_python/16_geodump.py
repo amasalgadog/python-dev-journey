@@ -2,11 +2,11 @@ import sqlite3
 import json
 import codecs
 
-conn = sqlite3.connect('opengeo.sqlite')
+conn = sqlite3.connect('using_databases_with_python/opengeo.sqlite')
 cur = conn.cursor()
 
 cur.execute('SELECT * FROM Locations')
-handle = codecs.open('where.js', 'w', 'utf-8')
+handle = codecs.open('using_databases_with_python/where.js', 'w', 'utf-8')
 handle.write('myData = [\n')
 count = 0
 
