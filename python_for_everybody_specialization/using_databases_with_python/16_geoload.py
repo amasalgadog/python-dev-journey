@@ -11,13 +11,13 @@ serviceurl = 'http://py4e-data.dr-chuck.net/opengeo?'
 conn = sqlite3.connect('opengeo.sqlite')
 cur = conn.cursor()
 
-cur.execute('CREATE TABLE IF NOT EXISTS Location (address TEXT, geodata TEXT)')
+cur.execute('CREATE TABLE IF NOT EXISTS Locations (address TEXT, geodata TEXT)')
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-location = ''
+location = 'using_databases_with_python/where.data'
 handle = open(location)
 
 count = 0
@@ -29,7 +29,7 @@ for line in handle:
 
     address = line.strip()
     print('')
-    cur.execute('SELECT geodata FROM Locations WHERE address=?', memoryview(address.encode(),))
+    cur.execute('SELECT geodata FROM Locations WHERE address=?', (memoryview(address.encode()),))
 
     try:
         data = cur.fetchone()[0]
@@ -70,7 +70,7 @@ for line in handle:
     
     if count % 10 == 0:
         print('Pausing for a bit...')
-        time.sleep(5)
+        # time.sleep(5)
 
 if nofound > 0:
     print('Number of features for which the location could not be found,', nofound)
