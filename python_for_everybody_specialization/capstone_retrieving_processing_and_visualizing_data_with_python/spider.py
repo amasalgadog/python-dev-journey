@@ -39,7 +39,7 @@ else :
     # asking for a website
     starturl = input('Enter web url or enter: ')
 
-    # if no web was given then do dr-chuck.com
+    # if no web is given then do dr-chuck.com
     if ( len(starturl) < 1 ) : starturl = 'http://www.dr-chuck.com/'
 
     # if the website ends with / , delete it from the url
@@ -48,7 +48,7 @@ else :
 
     if ( starturl.endswith('.htm') or starturl.endswith('.html') ) :
         # if the website ends with .htm or .html (a webpage within the website)
-        # then retrieved the website from where it's located
+        # then retrieved the website from where this webpage it's located
         pos = starturl.rfind('/')
         # retrieved the position of the last occurrence of the placeholder /
         # then cut down the website url up to this position
@@ -73,7 +73,7 @@ many = 0
 while True:
     # first while loop iteration - ask for how many pages
     if ( many < 1 ) :
-        sval = input('How many pages:')
+        sval = input('How many pages: ')
         if ( len(sval) < 1 ) : break
         many = int(sval)
     many = many - 1
