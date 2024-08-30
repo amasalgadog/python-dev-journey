@@ -1,3 +1,11 @@
+'''
+
+This program will work with the spider.sqlite database created by
+spider.py. The code will update the old_rank and new_rank colummns
+on the database.
+
+'''
+
 import sqlite3
 
 conn = sqlite3.connect('spider.sqlite')
