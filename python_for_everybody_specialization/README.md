@@ -4,6 +4,6 @@ This is a python summed up material from the 'Python for Everybody' Coursera's S
 
 [x] Getting Started with Python  
 [x] Python Data Structures  
-[x] Using Python to Access Web Data
-[x] Using Databases with Python
+[x] Using Python to Access Web Data  
+[x] Using Databases with Python  
 [ ] Capstone: Retrieving, Processing and Visualizing Data with Python  
